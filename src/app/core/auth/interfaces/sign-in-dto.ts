@@ -1,4 +1,6 @@
+import { AbstractControl } from "@angular/forms";
+
 export interface SignInDTO {
-    email:string | undefined | null,
-    password:string | undefined | null,
+    email: string | null | undefined,
+    password: string | null | undefined,
 }

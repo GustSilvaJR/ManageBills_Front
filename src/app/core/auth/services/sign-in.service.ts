@@ -9,18 +9,24 @@ import { SignInDTO } from '../interfaces/sign-in-dto';
 })
 export class SignInService {
 
+  private url:string = "http://localhost:8000/login";
+
   constructor(private httpClient:HttpClient) { }
 
   public signIn(data: SignInDTO):Observable<any>{
-    return this.httpClient.post('127.0.0.1', data).pipe(
+    
+    console.log(data);
+
+    return this.httpClient.post(this.url, data).pipe(
       res => {
+        console.log("retorno");
         console.log(res);
         return res;
       },
 
       error => {
         console.log(error);
-        return error
+        return error;
       }
     );
   }
