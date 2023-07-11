@@ -1,20 +1,26 @@
-@import './../../../../scss/variables.scss';
+@import './../../../../scss/index.scss';
 
 header{
-    background-color: var(--header);
+    background-color: var(--nav-bg);
     color: var(--text-menu);
     height: 80px;
     display: flex;
     align-items: center;
 
+    
+
     nav{
+        width: 300px;
         display: flex;
+        justify-content: space-around;
         align-items: center;
     }
 
     span{
         font-size: 23px;
         margin-left: 10px;
+
+        font-family: 'Jacques Francois', serif;
     }
 }
 
