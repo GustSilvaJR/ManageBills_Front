@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -12,10 +13,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   imports: [
     CommonModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSidenavModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    MatSidenavModule
   ]
 })
 export class SharedModule { }

@@ -53,7 +53,9 @@ export class LoginComponent {
             localStorage.removeItem('currentUser');
             localStorage.setItem('current_user', JSON.stringify(user));
             
-            this.router.navigate(['/dashboard']);
+            //this.router.navigateByUrl('/pages/dashboard');
+            this.router.navigate(['/pages']);
+            
           } else {
             this.message_error = "Erro ao efetuar login"
             alert("Erro ao efetuar login");

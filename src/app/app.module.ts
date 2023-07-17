@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './mainApp/app.component';
 
@@ -8,19 +8,19 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 
 //Components
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { PagesModule } from './pages/pages.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
     CoreModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

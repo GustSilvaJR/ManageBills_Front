@@ -14,7 +14,6 @@ export class CanActivateGuard implements CanActivate {
   }
 
   public canSigIn():boolean{
-    console.log("Passei no guard");
     return true;
   }
   
