@@ -16,7 +16,7 @@ export class HeaderComponent {
   public status_sidebar = false;
 
   public toggleSidebar(){
-    console.log('to entrando aqui ')
+
     this.toggle_sidebar.emit(!this.status_sidebar);
     this.status_sidebar = !this.status_sidebar;
   }

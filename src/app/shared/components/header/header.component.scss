@@ -28,3 +28,24 @@ img{
     width: 60px;
 }
 
+.btn_side_menu {
+    color: white;
+    
+
+    mat-icon{
+        font-size: 28px;
+    }
+}
+
+.btn_side_menu:hover {
+    border: 1px solid white;
+}
+
+.btn_side_menu:active {
+    border: 1px solid rgb(185, 181, 181);
+}
+
+.mat-icon {
+    width: 28px;
+    height: 28px;
+}
