@@ -1,6 +1,6 @@
 <app-header (toggle_sidebar)="toggleSidebar($event)"></app-header>
 
-<mat-sidenav-container>
+<mat-sidenav-container style="margin-top: 80px;">
     <mat-sidenav [(opened)]="opened" mode="side">
         <span>teste</span>
     </mat-sidenav>
@@ -9,3 +9,5 @@
         <router-outlet name="pages"> </router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
+
+<app-footer></app-footer>
