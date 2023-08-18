@@ -1,38 +1,41 @@
-@import './../../../../scss/index.scss';
+@import "./../../../../scss/index.scss";
 
-header{
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    margin-bottom: 80px;
+
     background-color: var(--nav-bg);
     color: var(--text-menu);
     height: 80px;
     display: flex;
     align-items: center;
 
-    
-
-    nav{
+    nav {
         width: 300px;
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
 
-    span{
+    span {
         font-size: 23px;
         margin-left: 10px;
 
-        font-family: 'Jacques Francois', serif;
+        font-family: "Jacques Francois", serif;
     }
 }
 
-img{
+img {
     width: 60px;
 }
 
 .btn_side_menu {
     color: white;
-    
 
-    mat-icon{
+    mat-icon {
         font-size: 28px;
     }
 }

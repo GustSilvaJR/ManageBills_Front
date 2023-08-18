@@ -24,6 +24,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	overflow-x: hidden;
 	line-height: 1;
 }
 ol, ul {
@@ -42,6 +43,14 @@ table {
 	border-spacing: 0;
 }
 
+mat-sidenav-content{
+	overflow-x: hidden !important;
+}
+
 .mat-icon {
     vertical-align: middle;
+}
+
+::-webkit-scrollbar {
+	display: none;
 }
