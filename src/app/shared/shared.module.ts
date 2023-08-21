@@ -19,14 +19,12 @@ import { FooterComponent } from './components/footer/footer.component';
     CommonModule,
     MatIconModule,
     MatToolbarModule,
-    MatSidenavModule,
-    MatCardModule
+    MatSidenavModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     MatSidenavModule,
-    MatCardModule
   ]
 })
 export class SharedModule { }
