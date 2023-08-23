@@ -126,7 +126,6 @@
   width: 150px;
 
   border-radius: 100%;
-  border: 2px solid ;
 
   &:nth-of-type(1) {
     @include border-gradient(rgb(187, 239, 191), rgb(17, 145, 40));
