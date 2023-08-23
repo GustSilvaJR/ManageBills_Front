@@ -55,3 +55,50 @@
         border: 1px solid black;
     }
 }
+
+  
+  .box {
+
+    text-align: center;
+
+    --border-size: 3px;
+    --border-angle: 0turn;
+    
+    border-radius: 30px 30px 30px 30px;
+    
+    height: 150px;
+    width: 150px;
+
+    background-image:  conic-gradient(
+        from var(--border-angle),
+        white,
+        white,
+        white,
+      ),
+      conic-gradient(from var(--border-angle), transparent 0%, rgb(185, 26, 26), #f03);
+    
+      background-size: calc(100% - (var(--border-size) * 2))
+        calc(100% - (var(--border-size) * 2)),
+      cover;
+    
+      background-position: center center;
+    background-repeat: no-repeat;
+  
+    animation: bg-spin 3s linear infinite;
+    @keyframes bg-spin {
+      to {
+        --border-angle: 1turn;
+      }
+    }
+  
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+  
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+  
