@@ -64,7 +64,6 @@
     --border-size: 3px;
     --border-angle: 0turn;
     
-    border-radius: 30px 30px 30px 30px;
     
     height: 150px;
     width: 150px;
@@ -102,3 +101,74 @@
     initial-value: 0turn;
   }
   
+
+
+
+/// border-gradient mixin: ///
+
+@mixin border-gradient($from, $to, $weight: 0) {
+  $mix-main: mix($from, $to);
+  $mix-sub-from: mix($mix-main, $from);
+  $mix-sub-to: mix($mix-main, $to);
+  
+  box-shadow: 0 1px 0 $weight rgba($mix-sub-to, .25),
+              0 -1px 0 $weight rgba($mix-sub-from, .25),
+              1px 0 0 $weight rgba($mix-sub-to, .25),
+              -1px 0 0 $weight  rgba($mix-sub-from, .25),
+              1px -1px 0 $weight rgba($mix-main, .5),
+              -1px 1px 0 $weight rgba($mix-main, .5),
+              1px 1px 0 $weight rgba($to, .75),
+              -1px -1px 0 $weight rgba($from, .75);
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+
+  border-radius: 100%;
+  border: 2px solid ;
+
+  &:nth-of-type(1) {
+    @include border-gradient(rgb(187, 239, 191), rgb(17, 145, 40));
+
+    animation: rotateThis 1s linear infinite;
+  }
+
+  &.desp{
+    @include border-gradient(rgb(244, 190, 190), rgb(157, 17, 17));
+  }
+ 
+}
+
+@keyframes rotateThis {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+// @keyframes psycho {
+//   0% {
+//     transform: rotate(0deg) scale(1) translate(0, 0);
+//   }
+  
+//   33% {
+//     transform: rotate(360deg) scale(1) translate(5px, 5px);
+//   }
+  
+//   66% {
+//     transform: rotate(720deg) scale(1) translate(-5px, -5px);
+//   }
+  
+//   100% {
+//     transform: rotate(1080deg) scale(1) translate(0, 0);
+//   }
+// }
+
+
+
+
+
