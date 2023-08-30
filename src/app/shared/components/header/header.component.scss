@@ -7,7 +7,8 @@ header {
     top: 0;
     margin-bottom: 80px;
 
-    background-color: var(--nav-bg);
+     background-color: rgba(0, 0, 0, 0.904);
+   // background-image: linear-gradient(to bottom, #4462c2, #546dcb, #6378d4, #7183de, #7f8ee7);
     color: var(--text-menu);
     height: 80px;
     display: flex;

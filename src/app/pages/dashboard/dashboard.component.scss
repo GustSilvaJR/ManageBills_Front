@@ -1,108 +1,123 @@
 .movimentacoes {
-    padding: 0px;
+  padding: 0px;
 
-    div {
-        padding: 0px;
-        display: flex;
-        justify-content: space-around;
-    }
+  div {
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .card {
-    background-color: white;
-    height: 240px;
+  background-color: white;
+  height: 240px;
 }
 
-.card-body div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.card-body div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
 
-    .title{
-        font-size: 2em;
-        //margin-right: auto;
-    }
-    
-    #card-gastos{
-        color: green;
+  .title {
+    font-size: 2em;
+    //margin-right: auto;
+  }
 
-    }
-
-    #card-despesas{
-        color:rgb(207, 30, 30);
-    }
-
-    h2{
-        font-size: 2em;
-    }
+  h2 {
+    font-size: 2em;
+  }
 }
 
-#teste{
-    font-size: 20px;
-    position: absolute;
-    top: -10px;
-    left: -20px;
+#card-ganhos {
+
+  .card{
+    background-image: linear-gradient(to bottom, #69d144, #61b644, #599c43, #518341, #496a3e);
+    border: none;
+  }
+
+  span{
+    color: white;
+  }
 }
 
-.demo-wrapper{
-    position: relative;
+#card-ganhos-title {
+  color: white;
+  text-align: center;
+}
+
+#card-despesas{
+
+  .card{
+    background-image: linear-gradient(to bottom, #e02222, #c22c2c, #a43232, #853535, #663636);
+    border:none;
+  }
+
+  span{
+    color: white;
+  }
+}
+
+#card-despesas-title {
+  color: white;
+  text-align: center;
+}
+
+#card-diversos{
+  .card{
+    background-image: linear-gradient(to bottom, #0478ff, #2166e4, #2a55ca, #2c44b0, #2a3497);
+    color: white;
+    border: none;
+  }
+}
+
+.demo-wrapper {
+  position: relative;
 }
 
 .balanco {
-    mat-card {
-        background-color: white;
-        border: 1px solid black;
-    }
+  mat-card {
+    background-color: white;
+    border: 1px solid black;
+  }
 }
 
-  
-  .box {
+.box {
+  text-align: center;
 
-    text-align: center;
+  --border-size: 3px;
+  --border-angle: 0turn;
 
-    --border-size: 3px;
-    --border-angle: 0turn;
-    
-    
-    height: 150px;
-    width: 150px;
+  height: 150px;
+  width: 150px;
 
-    background-image:  conic-gradient(
-        from var(--border-angle),
-        white,
-        white,
-        white,
-      ),
-      conic-gradient(from var(--border-angle), transparent 0%, rgb(185, 26, 26), #f03);
-    
-      background-size: calc(100% - (var(--border-size) * 2))
-        calc(100% - (var(--border-size) * 2)),
-      cover;
-    
-      background-position: center center;
-    background-repeat: no-repeat;
-  
-    animation: bg-spin 3s linear infinite;
-    @keyframes bg-spin {
-      to {
-        --border-angle: 1turn;
-      }
-    }
-  
-    &:hover {
-      animation-play-state: paused;
+  background-image: conic-gradient(from var(--border-angle), white, white, white),
+    conic-gradient(from var(--border-angle), transparent 0%, rgb(185, 26, 26), #f03);
+
+  background-size:
+    calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)),
+    cover;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 3s linear infinite;
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
     }
   }
-  
-  @property --border-angle {
-    syntax: "<angle>";
-    inherits: true;
-    initial-value: 0turn;
+
+  &:hover {
+    animation-play-state: paused;
   }
-  
+}
 
-
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
 
 /// border-gradient mixin: ///
 
@@ -110,15 +125,16 @@
   $mix-main: mix($from, $to);
   $mix-sub-from: mix($mix-main, $from);
   $mix-sub-to: mix($mix-main, $to);
-  
-  box-shadow: 0 1px 0 $weight rgba($mix-sub-to, .25),
-              0 -1px 0 $weight rgba($mix-sub-from, .25),
-              1px 0 0 $weight rgba($mix-sub-to, .25),
-              -1px 0 0 $weight  rgba($mix-sub-from, .25),
-              1px -1px 0 $weight rgba($mix-main, .5),
-              -1px 1px 0 $weight rgba($mix-main, .5),
-              1px 1px 0 $weight rgba($to, .75),
-              -1px -1px 0 $weight rgba($from, .75);
+
+  box-shadow:
+    0 1px 0 $weight rgba($mix-sub-to, 0.25),
+    0 -1px 0 $weight rgba($mix-sub-from, 0.25),
+    1px 0 0 $weight rgba($mix-sub-to, 0.25),
+    -1px 0 0 $weight rgba($mix-sub-from, 0.25),
+    1px -1px 0 $weight rgba($mix-main, 0.5),
+    -1px 1px 0 $weight rgba($mix-main, 0.5),
+    1px 1px 0 $weight rgba($to, 0.75),
+    -1px -1px 0 $weight rgba($from, 0.75);
 }
 
 .circle {
@@ -134,27 +150,22 @@
 
     animation: rotateThis 1s linear infinite;
 
-    span{
+    span {
       font-size: 1.5em;
     }
   }
 
-  &.desp{
+  &.desp {
     @include border-gradient(rgb(244, 190, 190), rgb(157, 17, 17));
   }
- 
 }
 
 @keyframes rotateThis {
   from {
     transform: rotate(0deg) scale(1);
   }
-  
+
   to {
     transform: rotate(360deg) scale(1);
   }
 }
-
-
-
-
