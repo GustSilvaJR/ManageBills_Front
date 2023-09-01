@@ -146,7 +146,7 @@
   border-radius: 100%;
 
   &:nth-of-type(1) {
-    @include border-gradient(rgb(187, 239, 191), rgb(17, 145, 40));
+    @include border-gradient(rgb(216, 235, 217), rgb(142, 197, 152));
 
     animation: rotateThis 1s linear infinite;
 
@@ -168,4 +168,9 @@
   to {
     transform: rotate(360deg) scale(1);
   }
+}
+
+#lucro_img{
+  width: 120px;
+  height: 120px;
 }
