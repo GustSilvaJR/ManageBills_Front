@@ -31,48 +31,52 @@ export class LoginComponent {
     };
 
     if(this.loginForm.valid){
-      
-      this.signInService.signIn(data).subscribe({
-        next: (res:any) => {
-          console.log(res);
 
-          if (res.auth) {
+      this.router.navigate(['/pages']);
 
-            const user = {
-              nome_usuario: res.nome,
-              email_usuario: res.email,
-              adm: res.administrador,
-              token: res.token,
-            }
-  
-            //Setando token de autenticação
-            localStorage.removeItem('access_token');
-            localStorage.setItem('access_token', res.token);
-  
-            //Setando dados do usuario logado
-            localStorage.removeItem('currentUser');
-            localStorage.setItem('current_user', JSON.stringify(user));
-            
-            //this.router.navigateByUrl('/pages/dashboard');
-            this.router.navigate(['/pages']);
-            
-          } else {
-            this.message_error = "Erro ao efetuar login"
-            alert("Erro ao efetuar login");
-          }
+      // this.signInService.signIn(data).subscribe({
+      //   next: (res:any) => {
+      //     console.log(res);
+
+      //     if (res.auth) {
+
+      //       const user = {
+      //         nome_usuario: res.nome,
+      //         email_usuario: res.email,
+      //         adm: res.administrador,
+      //         token: res.token,
+      //       }
+
+      //       //Setando token de autenticação
+      //       localStorage.removeItem('access_token');
+      //       localStorage.setItem('access_token', res.token);
+
+      //       //Setando dados do usuario logado
+      //       localStorage.removeItem('currentUser');
+      //       localStorage.setItem('current_user', JSON.stringify(user));
+
+      //       //this.router.navigateByUrl('/pages/dashboard');
+      //       this.router.navigate(['/pages']);
+
+      //     } else {
+      //       this.message_error = "Erro ao efetuar login"
+      //       alert("Erro ao efetuar login");
+
+      //       this.router.navigate(['/pages']);
+      //     }
 
 
-        },
-        error: (err) => {
-          console.log("Error: ");
-          console.log(err);
-  
-          //this.msgError = "Servidor com problemas! Entre em contato com o administrador ou tente novamente mais tarde.";
-        }
-      })
+      //   },
+      //   error: (err) => {
+      //     console.log("Error: ");
+      //     console.log(err);
+
+      //     //this.msgError = "Servidor com problemas! Entre em contato com o administrador ou tente novamente mais tarde.";
+      //   }
+      // })
 
     }
-    
+
   }
 
   public teste():void{
