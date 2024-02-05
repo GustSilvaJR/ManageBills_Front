@@ -7,13 +7,14 @@ import {MatSidenavModule} from '@angular/material/sidenav';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  
+
 })
 export class HeaderComponent {
 
   @Output() public toggle_sidebar = new EventEmitter();
 
   public status_sidebar = false;
+  public search:String = "";
 
   public toggleSidebar(){
 
