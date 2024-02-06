@@ -18,8 +18,26 @@
     </div>
   </div>
 
-  <button style="margin-left: auto;  margin-right: 15px;" mat-button class="n btn btn_side_menu" aria-label="Sair"
+  <!-- <button style="margin-left: auto;  margin-right: 15px;" mat-button class="n btn btn_side_menu" aria-label="Sair"
     (click)="toggleSidebar()" type="button">
     <mat-icon style="width: 32px;"> logout </mat-icon>
+  </button> -->
+
+  <button style="margin-left: auto;  margin-right: 15px;" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
   </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>person</mat-icon>
+      <span>Perfil</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>call</mat-icon>
+      <span>Contato</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span>Sair</span>
+    </button>
+  </mat-menu>
 </header>
