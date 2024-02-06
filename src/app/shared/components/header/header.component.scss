@@ -1,57 +1,90 @@
 @import "./../../../../scss/index.scss";
 
 header {
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    top: 0;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
 
-    background-color: rgba(0, 0, 0, 0.904);
-    color: var(--text-menu);
-    height: 70px;
+  background-color: rgba(0, 0, 0, 0.904);
+  color: var(--text-menu);
+  height: 70px;
+  display: flex;
+  align-items: center;
+
+  nav {
+    width: 300px;
     display: flex;
+    justify-content: space-around;
     align-items: center;
+  }
 
-    nav {
-        width: 300px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+  span {
+    font-size: 23px;
+    margin-left: 10px;
 
-    span {
-        font-size: 23px;
-        margin-left: 10px;
-
-        font-family: "Jacques Francois", serif;
-    }
+    font-family: "Jacques Francois", serif;
+  }
 }
 
 img {
-    width: 60px;
+  width: 60px;
 }
 
-.search {
-  height: 70px;
+#search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+#search input {
+  width: 500px;
+  background: none;
+  color: white;
+}
+
+
+#search input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: none;
+  border-color: rgba(255, 255, 255, 0.363);
+}
+
+#search input::placeholder {
+  color: rgba(255, 255, 255, 0.548);
+  opacity: 0.6;
+}
+
+#search input:focus {
+  outline: none !important;
+  border-color: white;
+}
+
+#search input:focus::placeholder {
+  color: white; /* Cor do placeholder ao focar */
+  opacity: 1;
 }
 
 .btn_side_menu {
-    color: white;
+  color: white;
 
-    mat-icon {
-        font-size: 28px;
-    }
+  mat-icon {
+    font-size: 28px;
+  }
 }
 
 .btn_side_menu:hover {
-    border: 1px solid white;
+  border: 1px solid white;
 }
 
 .btn_side_menu:active {
-    border: 1px solid rgb(185, 181, 181);
+  border: 1px solid rgb(185, 181, 181);
 }
 
 .mat-icon {
-    width: 28px;
-    height: 28px;
+  width: 28px;
+  height: 28px;
 }

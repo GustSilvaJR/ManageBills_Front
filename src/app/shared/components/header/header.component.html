@@ -12,14 +12,10 @@
       <span style="align-self: center;">BOLSIN</span>
     </div>
   </nav>
-  <div style="display: flex; border: 1px solid red; align-items: center; justify-content: center;">
-    <mat-form-field class="search">
-      <mat-label>Clearable input</mat-label>
-      <input matInput name="search" type="text" [(ngModel)]="search">
-      <button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="search=''">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
+  <div id="search">
+    <div class="input-group flex-nowrap">
+      <input type="text" class="form-control" placeholder="Filtrar" aria-label="Username" >
+    </div>
   </div>
 
   <button style="margin-left: auto;  margin-right: 15px;" mat-button class="n btn btn_side_menu" aria-label="Sair"
