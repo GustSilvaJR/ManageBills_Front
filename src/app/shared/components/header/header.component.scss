@@ -1,5 +1,12 @@
 @import "./../../../../scss/index.scss";
 
+:root{
+  .mat-mdc-button>.mat-icon{
+    margin-right: 0px;
+  }
+
+}
+
 header {
   position: fixed;
   z-index: 10;
@@ -11,6 +18,7 @@ header {
   height: 70px;
   display: flex;
   align-items: center;
+
 
   nav {
     width: 300px;
@@ -71,9 +79,11 @@ img {
 .btn_side_menu {
   color: white;
 
-  mat-icon {
-    font-size: 28px;
-  }
+  padding: 2px;
+
+  // mat-icon {
+  //   font-size: 28px;
+  // }
 }
 
 .btn_side_menu:hover {
@@ -84,7 +94,7 @@ img {
   border: 1px solid rgb(185, 181, 181);
 }
 
-.mat-icon {
-  width: 28px;
-  height: 28px;
-}
+// .mat-icon {
+//   width: 28px;
+//   height: 28px;
+// }
